@@ -36,6 +36,6 @@
     return cell;
 }
 -(void)setVal:(NSString *)string {
-    
+    self.NecfolLabel.text = string;
 }
 @end

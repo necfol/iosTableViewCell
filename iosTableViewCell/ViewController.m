@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NecfolTableViewCell.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -27,7 +28,8 @@
     return 50;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    NecfolTableViewCell *cell = [NecfolTableViewCell cellWithTable:tableView];
+    [cell setVal:@"ddddd"];
     return cell;
 }
 @end
