@@ -28,8 +28,13 @@
     return 50;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NecfolTableViewCell *cell = [NecfolTableViewCell cellWithTable:tableView];
-    [cell setVal:@"ddddd"];
+//    NecfolTableViewCell *cell = [NecfolTableViewCell cellWithTable:tableView];
+//    [cell setVal:@"ddddd"];
+    NSString *ID = @"cell";
+    NecfolTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (cell == nil) {
+        cell = [[NecfolTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+    }
     return cell;
 }
 @end

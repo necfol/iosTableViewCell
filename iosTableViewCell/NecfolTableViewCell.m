@@ -38,4 +38,16 @@
 -(void)setVal:(NSString *)string {
     self.NecfolLabel.text = string;
 }
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        UILabel *label = [[UILabel alloc] init];
+        label.text = @"测试";
+        self.NecfolLabel = label;
+        [self.contentView addSubview:label];
+    }
+    return self;
+}
+-(void)layoutSubviews {
+    self.NecfolLabel.frame = CGRectMake(0, 0, 100, 50);
+}
 @end
